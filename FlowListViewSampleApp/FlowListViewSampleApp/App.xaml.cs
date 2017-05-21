@@ -20,6 +20,7 @@ namespace FlowListViewSampleApp
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<SimpleSamplePage>();
+            Container.RegisterTypeForNavigation<BindingToMultiplePropertyModelPage>();
         }
     }
 }

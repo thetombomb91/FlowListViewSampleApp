@@ -10,6 +10,7 @@ namespace FlowListViewSampleApp.ViewModels
     public class MainPageViewModel : BindableBase, INavigationAware
     {
         public DelegateCommand NavToSimpleSampleCommand { get; set; }
+        public DelegateCommand NavToMultiplePropertySampleCommand { get; set; }
 
         public INavigationService _navigationService;
 
@@ -24,6 +25,12 @@ namespace FlowListViewSampleApp.ViewModels
         {
             _navigationService = navigationService;
             NavToSimpleSampleCommand = new DelegateCommand(OnNavToSimpleSample);
+            NavToMultiplePropertySampleCommand = new DelegateCommand(OnNavToMultiplePropertySample);
+        }
+
+        private async void OnNavToMultiplePropertySample()
+        {
+            await _navigationService.NavigateAsync(Constants.MULTIPLE_PROPERTY_SAMPLE_PAGE_NAME);
         }
 
         private async void OnNavToSimpleSample()

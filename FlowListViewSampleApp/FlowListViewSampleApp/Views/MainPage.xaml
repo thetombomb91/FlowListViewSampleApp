@@ -9,7 +9,12 @@
     <Label 
         Text="{Binding Title}" />
     <Button 
+        x:Name="SimpleSample"
         Text="Simple Sample"
         Command="{Binding NavToSimpleSampleCommand}"/>
+    <Button 
+        x:Name="MultiplePropertySample"
+        Text="Multiple Property Sample"
+        Command="{Binding NavToMultiplePropertySampleCommand}"/>
     </StackLayout>
 </ContentPage>

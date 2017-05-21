@@ -5,7 +5,6 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
              x:Class="FlowListViewSampleApp.Views.SimpleSamplePage">
-
     <flv:FlowListView 
         x:Name="flowListView" 
         FlowColumnCount="3" 
