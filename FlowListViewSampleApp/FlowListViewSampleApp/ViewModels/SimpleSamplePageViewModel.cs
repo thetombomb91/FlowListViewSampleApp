@@ -10,10 +10,21 @@ namespace FlowListViewSampleApp.ViewModels
 {
     public class SimpleSamplePageViewModel : BindableBase
     {
+        public DelegateCommand PullToRefresh { get; set; }
+
 
         public SimpleSamplePageViewModel()
         {
+            PullToRefresh = new DelegateCommand(OnPullToRefresh);
+
             GenerateSimpleItems();
+        }
+
+        private bool _RefreshActive;
+        public bool RefreshActive
+        {
+            get { return _RefreshActive; }
+            set { SetProperty(ref _RefreshActive, value); }
         }
 
         private ObservableCollection<SimpleItem> _simpleItems = new ObservableCollection<SimpleItem>();
@@ -26,6 +37,10 @@ namespace FlowListViewSampleApp.ViewModels
             }
         }
 
+        private void OnPullToRefresh()
+        {
+            RefreshActive = false;
+        }
 
         private void GenerateSimpleItems()
         {

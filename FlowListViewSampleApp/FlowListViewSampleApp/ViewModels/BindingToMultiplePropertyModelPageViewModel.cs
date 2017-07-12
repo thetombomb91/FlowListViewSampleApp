@@ -38,6 +38,7 @@ namespace FlowListViewSampleApp.ViewModels
             multiplePropertyItem.BackgroundColor = Color.FromRgb(random.Next(256), random.Next(256), random.Next(256));
             multiplePropertyItem.Id = MultiplePropertyItems[MultiplePropertyItems.Count - 1].Id + 1;
             MultiplePropertyItems.Add(multiplePropertyItem);
+
         }
 
 

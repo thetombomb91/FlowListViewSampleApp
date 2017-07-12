@@ -16,5 +16,9 @@
         x:Name="MultiplePropertySample"
         Text="Multiple Property Sample"
         Command="{Binding NavToMultiplePropertySampleCommand}"/>
+    <Button 
+        x:Name="TogglingSample"
+        Text="Toggling Sample"
+        Command="{Binding NavToTogglingSampleCommand}"/>
     </StackLayout>
 </ContentPage>

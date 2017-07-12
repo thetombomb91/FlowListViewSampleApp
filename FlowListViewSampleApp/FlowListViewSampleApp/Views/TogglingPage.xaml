@@ -4,24 +4,26 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
-             x:Class="FlowListViewSampleApp.Views.SimpleSamplePage">
+             x:Class="FlowListViewSampleApp.Views.TogglingPage">
     <flv:FlowListView 
         x:Name="flowListView" 
         FlowColumnCount="3" 
         SeparatorVisibility="None" 
-        HasUnevenRows="false"
-        IsPullToRefreshEnabled="true"
-        RefreshCommand="{Binding PullToRefresh}"
-        IsRefreshing="{Binding RefreshActive}"               
-		FlowItemsSource="{Binding SimpleItems}" >
+        HasUnevenRows="True"
+		FlowItemsSource="{Binding TogglingItems}" >
         <flv:FlowListView.FlowColumnTemplate>
             <DataTemplate>
-                <Label 
-                    HorizontalOptions="Fill" 
-                    VerticalOptions="Fill" 
-					XAlign="Center" 
-                    YAlign="Center" 
-                    Text="{Binding Id}"/>
+                <StackLayout>
+                    <BoxView
+                        Color="Black"
+                        />
+                    <Label 
+                        HorizontalOptions="Fill" 
+                        VerticalOptions="Fill" 
+					    XAlign="Center" 
+                        YAlign="Center" 
+                        Text="{Binding Id}"/>
+                </StackLayout>
             </DataTemplate>
         </flv:FlowListView.FlowColumnTemplate>
     </flv:FlowListView>
